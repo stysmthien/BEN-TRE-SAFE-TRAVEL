@@ -1,4 +1,4 @@
-# BEN TRE SAFE TRAVEL — Phân tích, mô tả và README
+# BEN TRE SAFE TRAVEL
 
 > Tài liệu này mô tả tổng quan, cấu trúc, chức năng, hướng dẫn cài đặt và đề xuất cải tiến cho dự án **BEN TRE SAFE TRAVEL**.
 
@@ -140,53 +140,3 @@ BEN TRE SAFE TRAVEL/
 └─ docs/
    └─ architecture.md
 ```
-
----
-
-## 8. Kiểm tra nhanh (what to look for khi phân tích ZIP thật)
-
-Khi mở file ZIP, kiểm tra những mục quan trọng sau:
-
-* Có file `README.md` gốc không? Có hướng dẫn cài đặt đầy đủ không?
-* File `.env.example` hay `config.json` — kiểm tra chỗ cần điền API keys (Mapbox, OpenAI, Firebase).
-* Dạng dữ liệu địa điểm: GeoJSON/CSV/SQL? Có trường: `name`, `type`, `lat`, `lng`, `address`, `images`, `description` không?
-* Scripts: `start`, `dev`, `build` trong `package.json`.
-* Code AI/chatbot: có thư mục `services/ai` hoặc `chatbot` không? Kiểm tra đầu vào/đầu ra.
-
----
-
-## 9. Gợi ý bảo mật & vận hành
-
-* **Không commit API keys**: di chuyển mọi khóa vào `.env` và thêm vào `.gitignore`.
-* **Rate-limit** endpoints public (ngăn abuse)
-* **Sao lưu dữ liệu**: lịch sao lưu cho DB, media.
-* **Chuẩn hoá dữ liệu địa điểm**: validate lat/lng, sanitize user input.
-
----
-
-## 10. Đề xuất cải tiến tính năng (giai đoạn tiếp theo)
-
-1. Thêm module **itinerary optimization** dựa trên thời gian mở cửa và khoảng cách (TSP heuristic đơn giản).
-2. Hệ thống đánh giá & recommender: gợi ý địa điểm dựa trên review và hành vi user.
-3. Offline map: cache tiles cho mobile khi mất kết nối.
-4. Analytics dashboard cho admin: lượt xem, lượt booking, nguồn người dùng.
-5. Hệ thống đa ngôn ngữ (vi/ en) cho khách quốc tế.
-
----
-
-## 11. Tóm tắt 3 câu (dùng cho README landing)
-
-1. BEN TRE SAFE TRAVEL là nền tảng du lịch thông minh giúp du khách khám phá Bến Tre bằng bản đồ tương tác và gợi ý hành trình.
-2. Hỗ trợ tìm kiếm địa điểm, đặt dịch vụ, và nhận cảnh báo an toàn thời gian thực.
-3. Dễ dàng mở rộng với tích hợp AI chatbot, analytics và hệ thống quản trị nội dung.
-
----
-
-## 12. Bước tiếp theo (nếu bạn muốn mình làm tiếp)
-
-* Mình có thể **mở file ZIP thực tế** và cập nhật toàn bộ README dựa trên nội dung thật sự trong `BEN TRE SAFE TRAVEL.zip` (liệt kê chính xác các file, endpoint, và code snippets).
-* Hoặc tạo bộ `README.md`, `CONTRIBUTING.md`, `DEPLOY.md` sẵn sàng để push lên repository.
-
----
-
-*Tài liệu này được viết để bạn có bản mô tả chi tiết ngay lập tức. Nếu muốn mình mở file ZIP và chỉnh sửa trực tiếp theo nội dung thực tế, trả lời "Mở file ZIP" và tải file lên để mình tiếp tục.*
